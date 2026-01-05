@@ -1,10 +1,10 @@
 hugoblox:
   schema: "2.0"
   identity:
-    name: 孙楚芮
+    name: ""
     type: person
-    tagline: 电子信息 | 哈尔滨工业大学
-    description: 你好！我本科毕业于哈尔滨工业大学，24年秋硕士入学，预计27年春毕业！我的研究方向包括自然语言处理、具身智能
+    tagline: ""
+    description: ""
   theme:
     mode: system
     pack: default
