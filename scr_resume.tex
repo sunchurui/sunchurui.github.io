@@ -1,0 +1,86 @@
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{multicol}
+% 精致项目符号（纯格式）
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{孙楚芮}
+\contactInfo{(+86) 15204503697}{crsun@ir.hit.edu.cn}
+\otherInfo{性别：男}{籍贯：黑龙江}{}{}
+\yourphoto{0.14}
+\vspace{-8mm}
+% ==================== 教育背景 ====================
+\section{教育背景}
+
+\datedsubsection{\textbf{哈尔滨工业大学}，计算机科学与技术，\textit{学士}}{2020.09 -- 2024.06}
+\datedsubsection{\textbf{哈尔滨工业大学}，电子信息（人工智能方向），\textit{硕士}}{2024.09 -- 至今}
+
+
+% ==================== 科研经历 ====================
+\section{科研经历}
+
+\datedsubsection{\textbf{哈尔滨工业大学 SCIR 实验室}，实习生}{2022.10 -- 2024.06}
+\begin{itemize}[parsep=0.8ex]
+    \item \textbf{\href{https://aclanthology.org/2023.findings-acl.453/}{多语言明喻对话数据集构建与模型评测}}  
+  参与构建中英双语明喻对话数据集，包含近 2 万条人工标注样本；设计评测方案分析主流模型在明喻理解与生成上的表现。成果发表于 \textbf{ACL Findings 2024}（CCF-A类会议）。
+  
+  \item \textbf{\href{https://aclanthology.org/2023.dstc-1.24/}{融合外部知识的任务型对话系统}}  
+在 DSTC-11 主观知识对话赛道中提出差异感知集成方法，融合多模型预测以提升知识选择鲁棒性；负责集成模块实现与生成模型微调，助力团队获知识选择单项第一名、总成绩第三名。成果发表于 \textbf{SigDial 2023}（ACL Workshop）。
+  
+\item \textbf{\href{https://aclanthology.org/2024.lrec-main.138/}{基于自验证机制的明喻知识挖掘}}  
+  参与构建多层级明喻质量数据集，支持从预训练语言模型中自动挖掘高置信度明喻知识。成果发表于 \textbf{COLING 2024}（CCF-B 类会议）。
+\end{itemize}
+
+\datedsubsection{\textbf{哈尔滨工业大学 SCIR 实验室}，硕士研究生}{2024.09 -- 至今}
+\begin{itemize}[parsep=0.8ex]
+\item \textbf{\href{https://doi.org/10.1002/smb2.70003}{具身智能综述：从感知到行为智能}}  
+  参与撰写关于具身人工智能的系统性综述，负责“场景感知”章节，梳理视觉-语言融合、环境建模与主动感知等方向的研究进展。文章发表于 \textbf{SmartBot 2025}
+  
+\item \textbf{\href{https://arxiv.org/abs/2512.08548}{基于语言抽象的机器人动作表征学习}}  
+  设计分层自适应动作识别方法，将连续轨迹转化为结构化自然语言动作指令，有效弥合高层指令与底层控制间的尺度差异；参与模型训练、跨任务泛化实验及论文撰写。成果发表于 \textbf{AAAI 2026}（CCF-A 类会议）。
+  
+\item \textbf{外部知识驱动的类比推理任务与评测}  
+  参与构建新型类比推理数据集，负责多类型自动评测方案设计及主流大语言模型测试；部分参与论文撰写。成果已投稿至 \textbf{ACL 2026}（CCF-A 类会议）。
+\end{itemize}
+
+% ==================== 项目经历 ====================
+\section{项目经历}
+
+\datedsubsection{\textbf{小红导览机器人：基于多模态知识库的智能问答系统}}{2024.04 -- 2024.06}
+\begin{itemize}[parsep=0.8ex]
+  \item 面向实时游客问答场景构建混合检索架构：在非 GPU 环境下采用分词+关键词匹配（自研规则引擎），GPU 环境下基于 \textbf{BGE} 向量模型进行语义检索，并引入 \textbf{Qwen-Reranker} 对召回结果重排序；
+  \item 集成对话历史感知的问题重写机制与父子文档索引策略，提升上下文相关问题的检索精度；
+  \item 系统上线哈工大中心，单日最高服务游客 1.2 万人次；配套宣传视频获 1000+ 点赞、890 次转发。
+\end{itemize}
+
+\datedsubsection{\textbf{机器脑：多模态人机协同执行系统}}{2024.11 -- 2024.12}
+\begin{itemize}[parsep=0.8ex]
+  \item 负责本地化大语言模型部署与推理优化，通过量化、边缘化部署、并行化与 prompt 工程，将首词生成延迟从 4.0s 降至 1.4s，显著提升交互流畅性；
+  \item 构建“语言-视觉-动作”闭环执行 pipeline：用户指令经 LLM 解析后，调用 \textbf{Grounding DINO} 实现开放词汇物体定位，拼接点云数据输入 \textbf{AnyGrasp} 生成抓取位姿，驱动机械臂完成操作；
+  \item 在桌面物品整理、汉诺塔求解等场景中验证能力，整体成功率超 \textbf{90\%}，支撑多次校内外参观演示。
+\end{itemize}
+
+\datedsubsection{\textbf{面向推理短板的合成数据构造系统}}{2025.07 -- 至今}
+\begin{itemize}[parsep=0.8ex]
+  \item 基于模型能力诊断（如推理弱项，知识短板），自动构造针对性训练样本；
+  \item 引入对抗性生成与辅助回答机制，确保合成数据质量与知识覆盖度。
+\end{itemize}
+
+% ==================== 技术能力（仅格式：双栏 + 大小写规范）====================
+\section{技术能力}
+\begin{multicols}{2}
+\begin{itemize}[parsep=0.5ex,left=0pt]
+  \item 编程语言：Python（熟练）、C++、C、Java、shell
+  \item 框架：PyTorch, Tensorflow, Transformers, Ros2
+  \item 工具：Mujoco, LoRA, vLLM, Git, Latex
+  \item 语言能力：英语（CET-6 520+），可流畅阅读论文
+\end{itemize}
+\end{multicols}
+
+\end{document}
